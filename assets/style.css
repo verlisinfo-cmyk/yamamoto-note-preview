@@ -60,6 +60,121 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
 }
 
+/* Top toggle between NOTE / メルマガ */
+.header-nav {
+  display: flex;
+  gap: 4px;
+  background: #f3f0ea;
+  border-radius: 999px;
+  padding: 3px;
+  font-size: 12px;
+}
+.header-nav a {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.header-nav a:hover { color: var(--text); }
+.header-nav a.active {
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+/* ===== Mail variations ===== */
+.mail-day {
+  border-color: #c69a6c;
+  color: #c69a6c;
+}
+.mail-subject {
+  margin: 6px 0 28px;
+  padding: 14px 16px;
+  background: #fdf8f1;
+  border: 1px solid #ecdfc8;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.mail-subject-label {
+  flex: 0 0 auto;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #c69a6c;
+  border: 1px solid #d8b88a;
+  padding: 2px 8px 3px;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+.mail-subject-text {
+  flex: 1 1 auto;
+  font-weight: 600;
+  color: var(--text);
+}
+.mail-body p {
+  margin: 0 0 1.4em;
+}
+.mail-ps {
+  margin-top: 40px;
+  padding: 22px 22px 24px;
+  background: #fff;
+  border: 1px dashed #d8d4cb;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.85;
+}
+.mail-ps-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--muted);
+  background: #f3f0ea;
+  padding: 3px 10px 4px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+.mail-ps-body p { margin: 0 0 1em; }
+.note-cta {
+  margin: 18px 0 4px !important;
+}
+.note-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.note-button:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.note-button-sub {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .mail-subject { font-size: 14px; padding: 12px 14px; }
+  .mail-subject-text { font-weight: 600; }
+  .mail-ps { padding: 18px 16px 20px; font-size: 14px; }
+  .note-button { padding: 11px 18px; font-size: 13px; }
+}
+
 main {
   max-width: var(--max);
   margin: 0 auto;
